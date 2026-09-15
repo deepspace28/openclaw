@@ -1,12 +1,14 @@
-# Clawdbot
+# Open Claw
 
-Clawdbot is a repository scaffold for the Clawdbot automation. This README documents the required setup steps and commands so the project can be bootstrapped consistently.
+Run a lightweight demo to visualize and operate the Open Claw interface.
 
-## Prerequisites
+## Run locally
 
-- Git
-- Bash-compatible shell
-- (Recommended) Python 3.11+ for local tooling and scripts
+```bash
+python3 open_claw.py --port 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Repository setup
 
@@ -15,62 +17,16 @@ Clawdbot is a repository scaffold for the Clawdbot automation. This README docum
 wsl -d ubuntu
 
 # Clone the repository
-
-git clone REPO_URL
+git clone https://github.com/deepspace28/openclaw.git
 cd openclaw
 ```
 
 ## Environment configuration
 
-1. Create an environment file for secrets and runtime configuration:
+Create an environment file for secrets and runtime configuration:
 
 ```bash
 cp .env.example .env
 ```
 
-2. Populate `.env` with required values (tokens, API keys, etc.). If you do not yet have an `.env.example`, create one with the variables your deployment expects.
-
-## Dependency installation
-
-Install dependencies once they are defined for the project. The common patterns are:
-
-### Python (recommended)
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### Node.js (if a JS runtime is added)
-
-```bash
-npm install
-```
-
-## Running Clawdbot
-
-Run the main entrypoint once it is added to the repository. Typical patterns:
-
-### Python
-
-```bash
-python -m clawdbot
-```
-
-### Node.js
-
-```bash
-npm run start
-```
-
-## Development workflow
-
-- Add a `requirements.txt` (Python) or `package.json` (Node.js) to track dependencies.
-- Add a `.env.example` file to document required configuration values.
-- Add a `README` section for any service dependencies (database, cache, etc.).
-
-## Troubleshooting
-
-- If commands fail due to missing files (e.g., `requirements.txt`), add the missing file before re-running the setup steps.
-- If runtime configuration is missing, update `.env` accordingly.
+Populate `.env` with required values (tokens, API keys, etc.). If you do not yet have an `.env.example`, create one with the variables your deployment expects.
